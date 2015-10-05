@@ -1,0 +1,71 @@
+<div ng-controller="ProfileCtrl"><!-- DIV PRINCIPAL -->
+<!--COMIENZO DE HEADER ------------------------------------------------------------------------------------------------------------------->
+<div>
+    <div class="bienvenidos-header">
+        <div class="bienvenidos-content-header">
+            <div class="logo-hor"><img src="images/logo-hor.png" class="logo" title="Milocal.cl Todo para vender y comprar" /></div>
+                <div class="buscar-categoria">
+                    <input type="text" class="form-control" name="categoria" placeholder="Buscar Categoría">
+                </div>
+                <div class="buscar-categoria-button">
+                    <button class="btn btn-success">Buscar</button>
+                </div>
+<div class="bienvenidos-perfil">
+<ul class="menu-perfil-facebook">
+<li>
+<span><strong>{{perfil.NombreLocal}}</strong></span>
+<a href="" /><img ng-src="{{authData.password.profileImageURL}}" class="foto-perfil-facebook"></a>
+<ul>
+<li><span class="glyphicon glyphicon-user"></span><a href="#/perfil" /> Perfil</a></li>
+<li><span class="glyphicon glyphicon-pencil"></span><a href="#/perfil" /> Editar Perfil</a></li>
+<li><span class="glyphicon glyphicon-sunglasses"></span><a href="#/perfil" /> Sobre Milocal.cl</a></li>
+<li><span class="glyphicon glyphicon-book"></span><a href="#/perfil" /> Faqs</a></li>
+<li><span class="glyphicon glyphicon-envelope"></span><a href="#/perfil" /> Contacto</a></li>
+<hr>
+<li><a href="" ng-click="logout()" class="btn btn-warning" />Cerrar Sesión</a></li>
+</ul>
+</li>
+</div>
+</div>
+</div>
+</div>
+<!--FIN HEADER----------------------------------------------------------------------------------------------------------------------------->
+<!-- COMIENZO DE PANEL DERECHO ------------------------------------------------------------------------------------------------------------>
+<div class="panel-derecho">
+    <section ng-init="tab = 1">
+        <ul class="nav nav-pills">
+            <li ng-class="{active:tab === 1}"><a href="" ng-click="tab = 1">Promoción y Estadísticas</a></li>
+            <li ng-class="{active:tab === 2}"><a href="" ng-click="tab = 2">CM</a></li>
+            <li ng-class="{active:tab === 3}"><a href="" ng-click="tab = 3">Opciones</a></li>
+        </ul>
+    </section>
+<div class="panel" ng-show="tab === 1">
+    <promocioncontrol></promocioncontrol>
+</div><!--FIN DE DIV PANEL 1 -->
+<div class="panel" ng-show="tab === 2">
+    <community></community>
+</div><!--FIN DE DIV PANEL 2 -->
+<div class="panel" ng-show="tab === 3">
+    <opciones></opciones>
+</div><!--FIN DE DIV PANEL 3 -->
+</div>
+<!-- FIN DE PANEL DERECHO ------------------------------------------------------------------------------------------------------------------>
+<!--COMIENZO PANEL DE ANUNCIOS ------------------------------------------------------------------------------------------------------------->
+<div class="anuncios" ng-controller="AnunciosCtrl">
+<div class="panel panel-default" ng-repeat="anuncios in anuncio | orderBy:'-FechaAnuncio'">
+  <div class="panel-heading" style="overflow:hidden;">
+      <img ng-src="{{authData.password.profileImageURL}}" class="foto-perfil-facebook" style="float:left;"><p style="margin:10px 0 0 60px;font-size:18px;"><a ng-href="#/perfil">{{anuncios.NombreLocal}}</a></p>
+  </div>
+  <div class="panel-body">
+    <p>{{anuncios.Anuncio}}</p>
+    <hr>
+    <small style="color:#888;">{{anuncios.FechaAnuncio | date:'HH:mm:ss dd-MM-yyyy'}}</small>
+      <button class="btn btn-primary" style="float:right;" ng-click="showme = !showme"><span ng-hide="showme">Mostrar Comentarios</span><span ng-show="showme">Ocultar Comentarios</span></button>
+    <div style="margin-top:20px;">
+    <comentarios ng-show="showme"></comentarios>
+    </div>
+  </div>
+</div>    
+</div>
+<!-- FIN DE PANEL DE ANUNCIOS -------------------------------------------------------------------------------------------------------------->
+</div><!-- FIN DIV PRINCIPAL -->

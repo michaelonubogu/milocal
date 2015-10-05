@@ -1,0 +1,44 @@
+<div ng-controller="ProfileCtrl">
+<div style="float:left;">
+    <img ng-src="{{authData.password.profileImageURL}}" class="foto-perfil-panel" />
+</div>
+<div style="float:left; margin-top:10px; margin-left:10px;" ng-controller="RubroCtrl">
+    <strong style="font-size:18px;">{{perfil.NombreLocal}}</strong>
+    <br /><strong style="color:#51A7F1;">Categoría:</strong> {{rubro}}
+</div>
+<div class="promo-panel">
+    <textarea name="promo-panel" class="form-control" ng-model="perfil.Anuncio" placeholder="{{perfil.Anuncio}}" rows="7"></textarea>
+    <button class="btn btn-success" style="margin-top:5px; float:left;" ng-click="addAnuncio()">Publicar</button>
+    <span style="float:left;margin-left:10px;">Subir Imagen <input type="file"></span>
+</div>
+<!--<div class="herramientas">
+<hr>
+<h3 style="float:left;margin-top:0;">Estadísticas:</h3><h3 class="glyphicon glyphicon-wrench" style="float:right;margin-top:0;"></h3>
+<p>
+<table class="table table-striped">
+    <tbody>
+      <tr>
+        <td>Usuarios Online: <strong></strong></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>N° Competidores del mismo rubro:</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Competidor más caro:</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Competidor más barato:</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</p>
+</div>-->
+</div>

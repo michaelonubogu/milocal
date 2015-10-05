@@ -1,0 +1,30 @@
+<div id="wrapper">
+<div class="bienvenidos-header">
+    <div class="bienvenidos-content-header" ng-controller="loginCtrl">
+        <div class="logo-hor"><img src="images/logo-hor.png" class="logo" title="Milocal.cl Todo para vender y comprar" /></div>
+            <div class="sesion">
+                <form novalidate="novalidate" name="formSesion">
+                    <div>
+                        <input type="email" class="form-control" ng-model="emailSesion" name="email" placeholder="Email" required>
+                    </div>
+                    <div>
+                        <input type="password" class="form-control" ng-model="passSesion" name="contrasena" placeholder="Contraseña" required>
+                    </div>
+                    <div>
+                        <a href="" class="btn btn-success" ng-click="login()" ng-disabled="formSesion.$invalid">Iniciar</a>
+                        <a href="#/registrar" class="btn btn-primary">Registrar</a>
+                    </div>
+                </form>
+        </div>
+    </div>
+</div>
+<div class="contenido">
+    <h1>¡Conéctate y ten acceso a las mejores herramientas<br /> que ayudarán a promocionar tu local!</h1>
+    <div style="margin:0 auto;text-align:center;"><button class="btn btn-success" style="font-size:24px;margin-top:30px;">¡Más Información!</button></div>
+    <div class="contenido-footer">
+        <div class="a"><span class="glyphicon glyphicon-comment"></span><p>Publica tu anuncio y llega a mas clientes, recibe notificaciones<br /> y reportes de como interactuan tus posibles clientes.</p></div>
+        <div class="a right"><span class="glyphicon glyphicon-list-alt"></span><p>Los anuncios se muestran por orden de llegada, <br />asi que siempre mantente actualizado para aparecer de los primeros.</p></div>
+        <div class="a"><span class="glyphicon glyphicon-magnet"></span><p>Ten acceso a herramientas que te ayudarán a crear mejores estrategias para promocionar tu local y atraer mas clientes.</p></div>
+    </div>
+</div>
+</div>

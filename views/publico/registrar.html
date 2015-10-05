@@ -1,0 +1,144 @@
+<style>
+input.ng-invalid.ng-dirty{
+border-color:#F38282;
+}
+.angular-google-map-container { height: 500px; }
+</style>
+<div class="registrar panel" ng-controller="ubicacion">
+<form novalidate="novalidate" name="formRegistrar" ng-controller="RegistrarCtrl">
+<div class="reg-side-l">
+<h1>Regístrese en Milocal.cl</h1>
+<p>y disfrute de un sin fin de herramientas para ayudar a su negocio.</p>
+<p><input type="text" name="nombrelocal" id="nombrelocal" ng-model="nombrelocal" class="form-control" placeholder="Nombre de local o persona natural" required></p>
+<p><select class="form-control" name="rubro" id="rubro" ng-model="rubrolocal" required>
+<option ng-selected="data.unit == item.id" disabled>Seleccione el rubro de su local</option>
+<option value="1">Abogados</option>
+<option value="2">Administradoras de Fondos de Pensiones</option>
+<option value="3">Agencia de Turismo</option>
+<option value="4">Agencia de Viajes</option>
+<option value="5">Almacen Bazar</option>
+<option value="6">Asesoras de Hogar</option>
+<option value="7">Bancos</option>
+<option value="8">Bares</option>
+<option value="9">Bibliotecas</option>
+<option value="10">Bicicletas</option>
+<option value="11">Bodegas</option>
+<option value="12">Boutiques</option>
+<option value="13">Botillerías</option>
+<option value="14">Canchas de Fútbol</option>
+<option value="15">Carnicerías</option>
+<option value="16">Casinos</option>
+<option value="17">Cervecerías</option>
+<option value="18">Centros Comerciales</option>
+<option value="19">Centros de Eventos</option>
+<option value="20">Cirugía Plástica</option>
+<option value="21">Clínicas</option>
+<option value="22">Comida Italiana</option>
+<option value="23">Comida China</option>
+<option value="24">Comida India</option>
+<option value="25">Comida Japonesa</option>
+<option value="26">Comida Rápida</option>
+<option value="27">Constructoras</option>
+<option value="28">Consultorios</option>
+<option value="29">Corte de Pelo</option>
+<option value="30">Dentistas</option>
+<option value="31">Desarrollo de Software</option>
+<option value="32">Desarrollo y Diseño Web</option>
+<option value="33">Diarios</option>
+<option value="34">Discotheques</option>
+<option value="35">Diseño Gráfico</option>
+<option value="36">Diseño Industrial</option>
+<option value="37">Editoriales</option>
+<option value="38">Emfermeras</option>
+<option value="39">Empresas de Energía</option>
+<option value="40">Empresas Forestales</option>
+<option value="41">Empresas de Telecomunicaciones</option>
+<option value="42">Estudios de Doblaje</option>
+<option value="43">Farmacias</option>
+<option value="44">Flores y Plantas</option>
+<option value="45">Gasfiters</option>
+<option value="46">Gimnasios</option>
+<option value="47">Hospitales</option>
+<option value="48">Imprentas</option>
+<option value="49">Internet</option>
+<option value="50">Joyerías</option>
+<option value="51">Kioskos</option>
+<option value="52">Laboratorios Farmacéuticos</option>
+<option value="53">Lavanderías</option>
+<option value="54">Librerías</option>
+<option value="55">Maestros Albañiles</option>
+<option value="56">Maestros Carpinteros</option>
+<option value="57">Maestros Electricistas</option>
+<option value="58">Mayoristas</option>
+<option value="59">Mineras</option>
+<option value="60">Música</option>
+<option value="61">Modistas</option>
+<option value="62">Mueblerías</option>
+<option value="63">Notarías</option>
+<option value="64">Panaderías</option>
+<option value="65">Profesores de Piano</option>
+<option value="66">Profesores de Guitarra</option>
+<option value="67">Profesores de Bajo</option>
+<option value="68">Profesores de Violín</option>
+<option value="69">Profesores de Batería</option>
+<option value="70">Profesores de Matemáticas</option>
+<option value="71">Profesores de Inglés</option>
+<option value="72">Profesores de Alemán</option>
+<option value="73">Profesores de Francés</option>
+<option value="74">Pizzerías</option>
+<option value="75">Pisqueras</option>
+<option value="76">Pubs</option>
+<option value="77">Productoras de Eventos</option>
+<option value="78">Radios</option>
+<option value="79">Relojerías</option>
+<option value="80">Reparación de Bicicletas</option>
+<option value="81">Reparación de Computadores</option>
+<option value="82">Reparación de Productos Electrónicos</option>
+<option value="83">Restaurantes</option>
+<option value="84">SPA</option>
+<option value="85">Salón de Belleza</option>
+<option value="86">Servicios Sanitarios</option>
+<option value="87">Schoperías</option>
+<option value="88">Sushi</option>
+<option value="89">Supermercados</option>
+<option value="90">Televisión Satelital</option>
+<option value="91">Tiendas Comerciales</option>
+<option value="92">Tiendas de Deportes</option>
+<option value="93">Transportes</option>
+<option value="94">Viñedos</option>
+</select></p>
+<strong>Ubicación</strong> (Ubique su local en el mapa arrastrando el marcador para rellenar este campo automáticamente)
+<p><input type="text" id="latitud" name="latitud" class="form-control" ng-model="marker.coords.latitude" required></p>
+<p><input type="text" id="longitud" name="longitud" class="form-control" ng-model="marker.coords.longitude" required></p>
+<fieldset class="fs-reg">
+<h4>Datos de cuenta</h4>
+<p><input type="text" id="usuario" ng-model="usuario" name="usuario" class="form-control" placeholder="Usuario" required></p>
+<p><input type="email" id="email" name="email" ng-model="email" class="form-control" placeholder="Email" required></p>
+<p><input type="password" id="contrasena" name="contrasena" ng-model="contrasena" class="form-control" placeholder="Ingrese contraseña" required ng-minlength="6"></p>
+</fieldset>
+<div class="reg-mensajes">
+<p ng-show="formRegistrar.nombrelocal.$dirty && formRegistrar.nombrelocal.$error.required" class="alert alert-danger">Ingrese Nombre de Local Por Favor!</p>
+<p ng-show="formRegistrar.rubro.$dirty && formRegistrar.rubro.$error.required" class="alert alert-danger">Escoja su Rubro Por Favor!</p>
+<p ng-show="formRegistrar.usuario.$dirty && formRegistrar.usuario.$error.required" class="alert alert-danger">Ingrese su Nombre de Usuario Por Favor!</p>
+<p ng-show="formRegistrar.email.$dirty && formRegistrar.email.$error.required" class="alert alert-danger">Ingrese su Email Por Favor!</p>
+<p ng-show="formRegistrar.email.$dirty && formRegistrar.email.$error.email" class="alert alert-danger">Email no Válido!</p>
+<p ng-show="formRegistrar.contrasena.$dirty && formRegistrar.contrasena.$error.required" class="alert alert-danger">Contraseña requerida!</p>
+<p ng-show="formRegistrar.contrasena.$dirty && formRegistrar.contrasena.$error.minlength" class="alert alert-danger">La contraseña debe tener como mínimo 6 carácteres!</p>
+</div>
+</div>
+<div class="reg-side-r">
+<h3>Ubica tu local</h3>
+<ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
+        <ui-gmap-marker coords="marker.coords" type="cluster" options="marker.options" events="marker.events" idkey="marker.id">
+        <ui-gmap-window options="windowOptions" closeClick="closeClick()">
+                <div><strong>{{nombrelocal}}</strong><br/>{{rubrolocal}}</div>
+            </ui-gmap-window>
+        </ui-gmap-marker>
+    </ui-gmap-google-map>
+</div>
+<div class="btn-toolbar" id="reg-toolbar">
+<a href="#/" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span> Volver </a>
+<button ng-click="registrarUsuario()" class="btn btn-success" ng-disabled="formRegistrar.$invalid">Registrar <span class="glyphicon glyphicon-ok"></span></button>
+</div>
+</form>
+</div>

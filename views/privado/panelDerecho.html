@@ -1,0 +1,18 @@
+<div class="panel-derecho" ng-show="authData">
+    <section ng-init="tab = 1">
+        <ul class="nav nav-pills">
+            <li ng-class="{active:tab === 1}"><a href="" ng-click="tab = 1">Promoción y Estadísticas</a></li>
+            <li ng-class="{active:tab === 2}"><a href="" ng-click="tab = 2">Community Manager</a></li>
+            <li ng-class="{active:tab === 3}"><a href="" ng-click="tab = 3">Opciones</a></li>
+        </ul>
+    </section>
+<div class="panel" ng-show="tab === 1">
+    <promocioncontrol></promocioncontrol>
+</div><!--FIN DE DIV PANEL 1 -->
+<div class="panel" ng-show="tab === 2">
+    <community></community>
+</div><!--FIN DE DIV PANEL 2 -->
+<div class="panel" ng-show="tab === 3">
+    <opciones></opciones>
+</div><!--FIN DE DIV PANEL 3 -->
+</div>

@@ -1,0 +1,47 @@
+<style>
+input.ng-invalid.ng-dirty{
+border-color:#F38282;
+}
+</style>
+<div class="bienvenidos-header" ng-controller="milocalAuthCtrl">
+<div class="bienvenidos-content-header">
+<div class="logo-hor"><img src="images/logo-hor.png" class="logo" title="Milocal.cl Todo para vender y comprar" />
+</div>
+<div class="buscar-categoria" ng-show="authData">
+<input type="text" class="form-control" name="categoria" placeholder="Buscar Categoría">
+</div>
+<div class="buscar-categoria-button" ng-show="authData">
+<button class="btn btn-success">Buscar</button>
+</div>
+<div ng-show="authData" class="bienvenidos-perfil">
+<ul class="menu-perfil-facebook">
+<li>
+<span><strong>{{local}}</strong></span>
+<a href="" /><img ng-src="{{authData.password.profileImageURL}}" class="foto-perfil-facebook"></a>
+<ul>
+<li><span class="glyphicon glyphicon-user"></span><a href="#/perfil" /> Perfil</a></li>
+<li><span class="glyphicon glyphicon-pencil"></span><a href="#/perfil" /> Editar Perfil</a></li>
+<li><span class="glyphicon glyphicon-sunglasses"></span><a href="#/perfil" /> Sobre Milocal.cl</a></li>
+<li><span class="glyphicon glyphicon-book"></span><a href="#/perfil" /> Faqs</a></li>
+<li><span class="glyphicon glyphicon-envelope"></span><a href="#/perfil" /> Contacto</a></li>
+<hr>
+<li><a href="" ng-click="logout()" class="btn btn-warning" />Cerrar Sesión</a></li>
+</ul>
+</li>
+</div>
+<div class="sesion" ng-hide="authData">
+<form novalidate="novalidate" name="formSesion">
+<div>
+<input type="email" class="form-control" ng-model="emailSesion" name="email" placeholder="Email" required>
+</div>
+<div>
+<input type="password" class="form-control" ng-model="passSesion" name="contrasena" placeholder="Contraseña" required>
+</div>
+<div>
+<a href="" class="btn btn-success" ng-click="login()" ng-disabled="formSesion.$invalid">Iniciar</a>
+<a href="#/registrar" class="btn btn-primary">Registrar</a>
+</div>
+</form>
+</div>
+</div>
+</div>

@@ -1,0 +1,20 @@
+<panel ng-controller="ProfileCtrl">
+                <div class="well" ng-controller="ComentariosCtrl">
+                <div class="input-group">
+                <input type="text" class="form-control" placeholder="Comentar Aquí..." ng-model="review">
+                <span class="input-group-btn">
+                <button class="btn btn-default" type="button" ng-click="addComentario()">Publicar!</button>
+                </span>
+                </div><!-- /input-group -->
+                <div class="cmt" style="margin-top:10px;">
+                    <div class="panel" ng-repeat="comentarios in comment">
+                        <img ng-src="{{authData.password.profileImageURL}}" class="foto-perfil-facebook" style="float:left;margin-right:10px;"><p style="color:#51A7F1;">{{comentarios.NombreLocal}}</p>
+                        <p style="float:right;font-size:11px;margin-top: -26px;">{{comentarios.FechaComentario | date:'HH:mm:ss dd-MM-yyyy'}}</p>
+                        <hr style="margin-top:0;">
+                        <p>{{comentarios.Comentario}}</p>
+                        <a ng-click="deleteComment($index)">delete</a>
+                        <p></p>
+                    </div>
+                </div><!--FIN DE COMENTARIOS -->
+            </div>
+</panel>

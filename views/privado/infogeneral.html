@@ -1,0 +1,37 @@
+<hr>
+<div class="wrapper-perfil" ng-controller="ProfileCtrl">
+<div class="foto-perfil"></div>
+<div class="info-general" ng-controller="RubroCtrl">
+<table class="table table-striped">
+    <tbody>
+      <tr>
+        <td><strong style="color:#51A7F1;">Local:</strong></td>
+        <td width="50%">{{ perfil.NombreLocal }}</td>
+        <td><strong style="color:#51A7F1;">Horario:</strong></td>
+        <td>{{ perfil.Horario }}</td>
+      </tr>
+      <tr>
+        <td><strong style="color:#51A7F1;">Dirección:</strong></td>
+        <td>{{ perfil.Direccion }}</td>
+        <td><strong style="color:#51A7F1;">Rubro de Local:</td>
+        <td>{{ rubro }}</td>
+      </tr>
+      <tr>
+        <td><strong style="color:#51A7F1;">Teléfono:</strong></td>
+        <td>{{ perfil.Telefono }}</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong style="color:#51A7F1;">Email:</strong></td>
+        <td>{{ perfil.Email }}</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="desc-perfil">
+<h4 style="color:#51A7F1;">Descripción:</h4>
+<p>{{ perfil.Descripcion }}</p>
+</div>
+</div><!-- FIN WRAPPER PERFIL -->
+<tr>
