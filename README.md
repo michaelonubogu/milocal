@@ -1,4 +1,3 @@
 # milocal
-Milocal.cl
 
-Proyecto Milocal v1. 2015
+Milocal v1. 2015
