@@ -1,0 +1,344 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700);
+
+body,html{
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+	background: url(../images/bg.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	
+}
+
+.sesion{
+	width: 700px;
+	height: 50px;
+	float:right;
+	position:relative;
+	padding-top: 8px;
+}
+
+.facebook-button{
+	margin:0 auto;
+	text-align:center;
+	}
+
+.sesion input{
+	float:left;
+	margin-right:10px;
+}
+
+.sesion .form-control{
+	width:auto;
+	}
+
+.registrar{
+	width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+	}
+
+.reg-side-l{
+	width:49%;
+	float:left;
+	}
+	
+.reg-side-r{
+	width:49%;
+	float:right;
+	}
+	
+/*.fs-reg[
+	width:200px;
+	}*/
+	
+.btn-toolbar{
+	width:100%;
+	float:left;
+	}
+	
+.bienvenidos-header{
+	width:100%;
+	height:50px;
+	position:fixed;
+	top:0;
+	background:#FFF;
+	z-index:9999;
+	}
+	
+.bienvenidos-content-header{
+	width:1200px;
+	height:50px;
+	margin:0 auto;
+	}
+	
+#con-pro-button{
+	float:right;
+	margin:7px 0 0 0;
+	}
+.logo-hor{
+	width:auto;
+	height:auto;
+	float:left;
+	}
+	
+.bienvenidos-footer{
+	width:100%;
+	height:50px;
+	background:#FFF;
+	bottom:0;
+	position:fixed;
+	}
+	
+.bienvenidos-perfil{
+	float:right;
+	margin-top:5px;
+	}
+	
+.foto-perfil-facebook{
+	border-radius:50%;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-o-border-radius:50%;
+	max-width:40px;
+	height:auto;
+	margin-left:10px;
+	}
+	
+.menu-perfil-facebook li{
+	list-style:none;
+	}
+	
+.menu-perfil-facebook li ul{
+	display:none;
+	background:#FFF;
+	-webkit-transition: all 0.7s ease;
+    	-moz-transition: all 0.7s ease -o-transition: all 0.4s ease;
+    	-ms-transition: all 0.7s ease;
+    	transition: all 0.7s ease;
+	}
+	
+.menu-perfil-facebook li:hover ul{
+	display:block;
+	min-width:250px;
+	position:absolute;
+	margin-left:-10px;
+    	border-radius:0 0 5px 5px;
+	-webkit-border-radius:0 0 5px 5px;
+	-moz-border-radius:0 0 5px 5px;
+	-o-border-radius:0 0 5px 5px;
+	-webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    	box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    	padding: 10px;
+    	-webkit-transition: all 0.7s ease;
+    	-moz-transition: all 0.7s ease -o-transition: all 0.4s ease;
+    	-ms-transition: all 0.7s ease;
+    	transition: all 0.7s ease;
+	}
+	
+.menu-perfil-facebook li ul li{
+	margin-top:10px;
+	}
+	
+.contenido{
+	width:100%;
+	height:100%;
+	position:relative;
+	}	
+	
+.contenido h1{
+	color:#FFF;
+	margin:100px 0 20px 0;
+	font-size:52px;
+	text-shadow:2px 2px 2px #000;
+	text-align:center;
+	}
+.buscar-categoria{
+	width:350px;
+	margin-top: 8px;
+	margin-left:20px;
+	float:left;
+	}
+	
+.buscar-categoria-button{
+	margin-top:8px;
+	float:left;
+	margin-left:10px;
+	}
+	
+.panel-control{
+	width:40%;
+	height:100%;
+	position:fixed;
+	right:0;
+	background:#F3F3F3;
+	padding: 60px 10px;
+	}
+	
+.panel-control section{
+	margin-bottom:10px;
+	}
+	
+.foto-perfil-panel{
+	border-radius:50%;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-o-border-radius:50%;
+	max-width:70px;
+	height:auto;
+	}
+	
+.panel{
+	overflow:hidden;
+	padding:10px;
+	}
+	
+.desc-panel{
+	width:100%;
+	height:auto;
+	float:left;
+	margin-top:10px;
+	padding-top:10px;
+	border-top:1px solid #CCC;
+	 }
+.promo-panel{
+	width:100%;
+	height:auto;
+	float:left;
+	margin-top:10px;
+	padding-top:10px;
+	border-top:1px solid #CCC;
+	 }
+	
+.herramientas{
+	width:100%;
+	height:auto;
+	float:left;
+	}
+	
+.perfil-wrapper{
+	width:1200px;
+	height:auto;
+	margin:0 auto;
+	position: absolute;
+    left: 0;
+    right: 0;
+    top: 10px;
+	}
+	
+.portada-perfil{
+	width;100%;
+	height:350px;
+	background:#ccc;
+	}
+	
+.foto-perfil{
+	width:130px;
+	height:150px;
+	background:#CCC;
+	float:left;
+	margin-right:10px;
+	}
+	
+.info-general{
+	float:left;
+	}
+	
+.desc-perfil{
+	float:left;
+	width:100%;
+	}
+
+.panel-derecho{
+    width:35%;
+    height: 100%;
+    background: #F6F6F6;
+    position:fixed;
+    right:0;
+    top:0;
+    padding:60px 10px 10px 10px;
+}
+
+.contenido-footer{
+    width: 100%;
+    height:auto;
+    background: #0079FF;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+}
+
+.a{
+    width:33%;
+    float:left;
+    text-align: center;
+    color: #FFF;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.a span{
+    width: 100%;
+}
+
+.glyphicon.glyphicon-comment, .glyphicon.glyphicon-list-alt, .glyphicon.glyphicon-magnet{
+    font-size: 75px;
+}
+
+.a p{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.right{
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+.anuncios{
+    width:65%;
+    height: auto;
+    position:absolute;
+    left:0;
+    top: 50px;
+    padding: 10px;
+}
+
+/****************************************************************************************************/
+
+/* The starting CSS styles for the enter animation */
+.fadeT.ng-enter {
+  -webkit-transition: .3s linear;
+  -moz-transition: .3s linear;
+  -o-transition: .3s linear;
+  transition: .3s linear;
+  opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.fadeT.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+/* now the element will fade out before it is removed from the DOM */
+.fadeT.ng-leave {
+  -webkit-transition: .3s linear;
+  -moz-transition: .3s linear;
+  -o-transition: .3s linear;
+  transition: .3s linear;
+  opacity:1;
+}
+.fadeT.ng-leave.ng-leave-active {
+  opacity:0;
+}
